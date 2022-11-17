@@ -1,0 +1,38 @@
+@import "variables";
+
+header {
+    background: #eaeaea;
+    width: 100%;
+
+    div {
+        padding: 12px 0;
+        display: flex;
+        place-content: center;
+    }
+
+    .logo {
+        background: #fff;
+        font-size: 2rem;
+        font-family: shrikhand;
+        box-shadow: 0px 4px 2px -1px #0002;
+        overflow: hidden;
+    }
+
+    .place {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        flex: 1;
+        font-size: 1rem;
+
+        .place-search{
+            position: absolute;
+            top: 50%; 
+            left: 0;
+            transform: translate(-150%, -50%);
+            border: none;
+            background: #0000;
+        }
+    }
+}
