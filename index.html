@@ -19,94 +19,135 @@
       </div>
       <div class="place">
         <button class="place-search">
-          <i class="fa-solid fa-location-dot"></i>
-        </button>Paris, Belleville
+          <i class="fa-solid fa-location-dot"></i></button
+        >Paris, Belleville
       </div>
     </header>
 
     <!-- main -->
     <main>
+      <!-- banner -->
       <section class="banner">
         <h2>Réservez le menu qui vous convient</h2>
         <p>
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <a href="#restaurants">Explorer nos restaurants</a>
+        <a href="#restaurants" class="button">Explorer nos restaurants</a>
       </section>
+
+      <!-- instructions -->
       <section class="instructions">
-        <div class="instruction-card">
-          <div class="instruction-step">1</div>
-          <div class="instruction-icon">
-            <i class="fa-solid fa-mobile-screen-button"></i>
+        <h2>Fonctionnement</h2>
+
+        <div class="instruction-card-container">
+          <div class="instruction-card">
+            <div class="instruction-step">1</div>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </span>
+            <span class="instruction-txt"> Choisissez un restaurant </span>
           </div>
-          <div class="instruction-txt">Choisissez un restaurant</div>
-        </div>
-        <div class="instruction-card">
-          <div class="instruction-step">2</div>
-          <div class="instruction-icon">
-            <i class="fa-solid fa-list-ul"></i>
+
+          <div class="instruction-card">
+            <div class="instruction-step">2</div>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-list-ul"></i>
+            </span>
+            <span class="instruction-txt"> Composez votre menu </span>
           </div>
-          <div class="instruction-txt">Composez votre menu</div>
-        </div>
-        <div class="instruction-card">
-          <div class="instruction-step">3</div>
-          <div class="instruction-icon"><i class="fa-solid fa-store"></i></div>
-          <div class="instruction-txt">Dégustez au restaurant</div>
+
+          <div class="instruction-card">
+            <div class="instruction-step">3</div>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-store"></i>
+            </span>
+            <span class="instruction-txt"> Dégustez au restaurant </span>
+          </div>
         </div>
       </section>
+
+      <!-- restaurants -->
       <section id="restaurants">
+        <h2>Restaurants</h2>
         <article class="restaurant">
           <div class="restaurant-img-container">
-            <img src="" alt="" class="restaurant-img" />
+            <img
+              src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="restaurant la palette du goût"
+              class="restaurant-img"
+            />
             <div class="new-restaurant">Nouveau</div>
           </div>
           <div class="restaurant-description-container">
             <div class="restaurant-description">
               <div class="restaurant-name">La palette du goût</div>
               <div class="restaurant-place">Ménilmontant</div>
-              <div class="restaurant-favourite"></div>
+            </div>
+            <div class="restaurant-favourite">
+              <i class="fa-regular fa-heart"></i>
             </div>
           </div>
         </article>
         <article class="restaurant">
           <div class="restaurant-img-container">
-            <img src="" alt="" class="restaurant-img" />
+            <img
+              src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="restaurant la note enchantée"
+              class="restaurant-img"
+            />
             <div class="new-restaurant">Nouveau</div>
           </div>
           <div class="restaurant-description-container">
             <div class="restaurant-description">
               <div class="restaurant-name">La note enchantée</div>
               <div class="restaurant-place">Charonne</div>
-              <div class="restaurant-favourite"></div>
+            </div>
+            <div class="restaurant-favourite">
+              <i class="fa-regular fa-heart"></i>
             </div>
           </div>
         </article>
         <article class="restaurant">
           <div class="restaurant-img-container">
-            <img src="" alt="" class="restaurant-img" />
+            <img
+              src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="restaurant à la française"
+              class="restaurant-img"
+            />
           </div>
           <div class="restaurant-description-container">
             <div class="restaurant-description">
-              <div class="restaurant-name">À la francçaise</div>
+              <div class="restaurant-name">À la française</div>
               <div class="restaurant-place">Cité Rouge</div>
-              <div class="restaurant-favourite"></div>
+            </div>
+            <div class="restaurant-favourite">
+              <!-- <i class="fa-solid fa-heart"></i> -->
+              ♡
             </div>
           </div>
         </article>
         <article class="restaurant">
           <div class="restaurant-img-container">
-            <img src="" alt="" class="restaurant-img" />
+            <img
+              src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="restaurant le délice des sens"
+              class="restaurant-img"
+            />
           </div>
           <div class="restaurant-description-container">
             <div class="restaurant-description">
               <div class="restaurant-name">Le délice des sens</div>
               <div class="restaurant-place">Folie-Méricourt</div>
-              <div class="restaurant-favourite"></div>
+            </div>
+            <div class="restaurant-favourite">
+              <i class="fa-regular fa-heart"></i>
             </div>
           </div>
         </article>
       </section>
     </main>
+
+    <!-- footer -->
     <footer>
       <div class="footer-icon"><img src="" alt="" /></div>
       <ul>

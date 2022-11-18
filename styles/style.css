@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,6 +50,21 @@ table {
   border-spacing: 0;
 }
 
+/* buttons */
+.button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
+  background: radial-gradient(at top left, #FF79DA, #9356DC);
+  border-radius: 99rem;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
+}
+
+/* header */
 header {
   background: #eaeaea;
   width: 100%;
@@ -84,9 +100,169 @@ header .place .place-search {
   background: rgba(0, 0, 0, 0);
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Home Page */
+main section:not(:nth-child(1)) {
+  padding: 0 2rem;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 15rem;
+  padding: 2rem 1.5rem;
+}
+.banner > * {
+  text-align: center;
+}
+.banner h2 {
+  padding: 0 2rem;
+  line-height: 2rem;
+}
+.banner p {
+  line-height: 1.25rem;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #fff;
+  height: 440px;
+}
+.instructions h2 {
+  padding-top: 1.25rem;
+}
+
+.instruction-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.75rem 0;
+  border-radius: 20px;
+  background: #f7f7f7;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+.instruction-card:hover {
+  background: rgba(147, 86, 220, 0.1254901961);
+}
+.instruction-card:hover .instruction-icon {
+  color: #9356DC;
+}
+.instruction-card .instruction-step {
+  position: absolute;
+  left: 0;
+  transform: translate(-50%);
+  background: #9356DC;
+  border-radius: 50%;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  aspect-ratio: 1/1;
+  color: #fff;
+  z-index: 10;
+  font-size: 0.75rem;
+}
+.instruction-card .instruction-icon {
+  padding: 0 1.75rem 0 2.5rem;
+  color: #7e7e7e;
+  font-size: 1.25rem;
+  transition: color 0.25s ease-in-out;
+}
+.instruction-card .instruction-txt {
+  font-weight: bold;
+}
+
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 1220px;
+}
+
+.restaurant {
+  height: 250px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
+}
+.restaurant .restaurant-img-container {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  height: 75%;
+}
+.restaurant .restaurant-img-container img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant .restaurant-img-container .new-restaurant {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #008766;
+  background: #99E2D0;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+}
+.restaurant .restaurant-description-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25%;
+  padding: 0 2rem 0 1rem;
+}
+.restaurant .restaurant-description-container > * {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.restaurant .restaurant-description-container .restaurant-name {
+  font-weight: bold;
+}
+.restaurant .restaurant-description-container .restaurant-place {
+  font-size: 0.9rem;
+}
+.restaurant .restaurant-description-container .restaurant-favourite {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: black;
+}
+.restaurant .restaurant-description-container .restaurant-favourite:after {
+  content: "♥";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.25s ease-in-out;
+  color: red;
+}
+.restaurant .restaurant-description-container .restaurant-favourite:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+html {
+  background: rgba(0, 0, 255, 0.3333333333);
+  scroll-behavior: smooth;
+}
+
 body {
   width: min(100%, 375px);
   margin: auto;
-  background: #F7F7F7;
+  background: #f7f7f7;
   font-family: roboto, sans-serif;
 }/*# sourceMappingURL=style.css.map */
