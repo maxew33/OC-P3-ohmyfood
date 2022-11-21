@@ -1,0 +1,104 @@
+@import "variables";
+
+.restaurant-favourite{
+    label{
+        --scale: 0;
+        --beam-transY: 0rem;
+
+        position: relative;
+        cursor: pointer;
+        font-size: 1.25rem;
+
+        .heart{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // display: none;
+        }
+
+        .heart-filled{
+            // color: $heart-color;
+            z-index: 10;
+            display: none;
+            transform:  translate(-50%, -50%) scale(0);
+            animation: .25s beat-it linear forwards;
+            background: linear-gradient($primary, $secondary);
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: #0000;
+        }
+
+        .beam{
+            position: absolute;
+            width: 1px;
+            height: .25rem;
+
+            display: none;
+
+            top: calc(50% - .2rem);
+            left: calc(50% - 1px);
+
+            @for $i from 1 through 7{
+                &:nth-child(#{$i}){
+                    transform: rotate(72deg * ($i +.5));
+                }
+            }
+
+            &::after{
+                content:"";
+                height: inherit;
+                width: inherit;
+                position: absolute;
+                background: $primary;             
+                animation: .25s beam-spread .1s linear forwards;
+            }
+        }
+    }
+
+    .rest-love-cb{
+        display:none;
+
+        ~label:hover, &:checked ~label{
+            .heart-filled{
+                display: inline;
+            }
+
+            .beam{
+                display: inline;
+            }
+
+        }
+    }
+
+}
+
+@keyframes beat-it {
+    0%{
+        transform:  translate(-50%, -50%) scale(0);
+    }
+    80%{
+        transform:  translate(-50%, -50%) scale(1.3);
+    }
+    100%{
+        transform:  translate(-50%, -50%) scale(1);
+    }    
+}
+
+@keyframes beam-spread {
+    0%{
+        opacity:1;
+        transform: translateY(0rem)
+
+    }
+    90%{
+        opacity:1;
+        transform: translateY(1rem)
+    }
+
+    100%{
+        opacity: 0;
+        transform: translateY(1.25rem)
+    }
+    
+}

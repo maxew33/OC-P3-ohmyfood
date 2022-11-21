@@ -2,13 +2,12 @@
 
 /* buttons */
 
-.button{
+a.button{
     width: fit-content;
     padding: 1.5rem 2rem;
     margin: 1rem auto;
     background: radial-gradient(at top left, $secondary, $primary);
     border-radius: 99rem;
     color: #fff;
-    text-decoration: none;
     box-shadow: 0px 4px 5px 2px #0002;
 }

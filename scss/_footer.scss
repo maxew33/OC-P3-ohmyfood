@@ -1,1 +1,19 @@
 @import 'variables';
+
+footer{
+    background: $bg4;
+    color: #fff;
+    line-height: 2rem;
+    padding: 2rem;
+
+    h1{
+        font-size: 1.25rem;
+        font-family: shrikhand;
+        overflow: hidden;
+        padding-bottom: .5rem;
+    }
+
+    i{
+        width: 1.75rem;
+    }
+}
