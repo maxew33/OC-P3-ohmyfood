@@ -11,23 +11,25 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <!-- header -->
     <header>
       <div class="logo">
         <h1>ohmyfood</h1>
       </div>
-      <div class="place">
-        <button class="place-search">
-          <i class="fa-solid fa-location-dot"></i></button
-        >Paris, Belleville
-      </div>
     </header>
 
     <!-- main -->
-    <main>
+    <main class="home-main">
       <!-- banner -->
       <section class="banner">
+        <div class="place">
+          <button class="place-search">
+            <i class="fa-solid fa-location-dot"></i>
+          </button>
+          Paris, Belleville
+        </div>
         <h2>Réservez le menu qui vous convient</h2>
         <p>
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
@@ -70,7 +72,7 @@
       <section id="restaurants">
         <h2>Restaurants</h2>
         <article class="restaurant">
-          <a href="/restaurants/laPaletteDuGout.html">
+          <a href="./restaurants/laPaletteDuGout.html">
             <div class="restaurant-img-container">
               <img
                 src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -89,11 +91,10 @@
                 <input
                   type="checkbox"
                   name=""
-                  id="rest-1-loved"
-                  class="rest-love-cb"
-                  class="rest-love-cb"
+                  id="restaurant-1-loved"
+                  class="restaurant-love-cb"
                 />
-                <label for="rest-1-loved">
+                <label for="restaurant-1-loved">
                   <span class="heart heart-empty">
                     <i class="fa-regular fa-heart"></i>
                   </span>
@@ -108,12 +109,13 @@
                   <span class="beam"></span>
                   <span class="beam"></span>
                 </label>
-              </div></div
-          ></a>
+              </div>
+            </div>
+          </a>
         </article>
 
         <article class="restaurant">
-          <a href="/restaurants/laNoteEnchantee.html">
+          <a href="./restaurants/laNoteEnchantee.html">
             <div class="restaurant-img-container">
               <img
                 src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -132,10 +134,10 @@
                 <input
                   type="checkbox"
                   name=""
-                  id="rest-2-loved"
-                  class="rest-love-cb"
+                  id="restaurant-2-loved"
+                  class="restaurant-love-cb"
                 />
-                <label for="rest-2-loved">
+                <label for="restaurant-2-loved">
                   <span class="heart heart-empty">
                     <i class="fa-regular fa-heart"></i>
                   </span>
@@ -156,7 +158,7 @@
         </article>
 
         <article class="restaurant">
-          <a href="/restaurants/aLaFrancaise.html">
+          <a href="./restaurants/aLaFrancaise.html">
             <div class="restaurant-img-container">
               <img
                 src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -174,10 +176,10 @@
                 <input
                   type="checkbox"
                   name=""
-                  id="rest-3-loved"
-                  class="rest-love-cb"
+                  id="restaurant-3-loved"
+                  class="restaurant-love-cb"
                 />
-                <label for="rest-3-loved">
+                <label for="restaurant-3-loved">
                   <span class="heart heart-empty">
                     <i class="fa-regular fa-heart"></i>
                   </span>
@@ -197,7 +199,7 @@
           </a>
         </article>
         <article class="restaurant">
-          <a href="/restaurants/leDeliceDesSens.html">
+          <a href="./restaurants/leDeliceDesSens.html">
             <div class="restaurant-img-container">
               <img
                 src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -215,10 +217,10 @@
                 <input
                   type="checkbox"
                   name=""
-                  id="rest-4-loved"
-                  class="rest-love-cb"
+                  id="restaurant-4-loved"
+                  class="restaurant-love-cb"
                 />
-                <label for="rest-4-loved">
+                <label for="restaurant-4-loved">
                   <span class="heart heart-empty">
                     <i class="fa-regular fa-heart"></i>
                   </span>
@@ -242,7 +244,7 @@
 
     <!-- footer -->
     <footer>
-        <h1>ohmyfood</h1>
+      <h1>ohmyfood</h1>
       <ul>
         <li>
           <a href="#">

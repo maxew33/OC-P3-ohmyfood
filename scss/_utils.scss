@@ -1,0 +1,24 @@
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$bg1: #f7f7f7;
+$bg2: #fff;
+$bg3: #eaeaea;
+$bg4: #353535;
+$fontfam1: shrikhand;
+
+@mixin box-shadow {
+    box-shadow: 0px 4px 5px 2px #0002;
+}
+
+@mixin flex-col-se {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@mixin image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
