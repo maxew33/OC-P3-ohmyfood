@@ -1,5 +1,78 @@
 @import "utils";
 
+
+/* animation 1 : loader */
+
+$loader-anim-dur: 2s;
+$loader-anim-delay: 0.2s;
+
+$duration: (random(2000) + 1000) * 1ms;
+
+body{
+    height: auto; 
+    overflow: hidden;
+    animation: site-displayed $duration linear forwards;
+}
+
+.loader {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    background: #eee;
+    color: #222;
+    height: 100vh;
+    width: 100vw;
+    font-family: $fontfam1;
+    animation: loader-vanished $duration steps(1, end) forwards;
+
+}
+
+.letter-container {
+    position: absolute;
+    top: calc(50% - 3rem);
+    left: 50%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    animation: turning $loader-anim-dur linear infinite;
+    transform-origin: center 6rem;
+}
+
+@for $i from 1 through 8 {
+    .letter-container:nth-child(#{$i}) {
+        animation-delay: $loader-anim-delay * $i * -1;
+    }
+}
+
+@keyframes turning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes site-displayed{
+    to{
+        height: auto;
+        overflow: auto;
+    }
+}
+
+@keyframes loader-vanished{
+    to{
+        transform: scale(0);
+    }
+}
+
+
+
+
+/* animation 2 : restaurant favourite */
+
 .restaurant-favourite{
     label{
         --scale: 0;

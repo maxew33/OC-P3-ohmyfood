@@ -4,10 +4,264 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ohmyfood: le délice des sens</title>    
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a53308940c.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-    <h1>le delice des sens</h1>
-    <a href="../index.html">retour</a>
-</body>
+    <!-- header -->
+    <header>
+      <div class="logo">
+        <h1>ohmyfood</h1>
+      </div>
+      <a href="/index.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </header>
+
+    <main>
+      <!-- restaurant banner -->
+      <div class="restaurant-banner">
+        <div class="restaurant-illus">
+          <img
+            src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="restaurant à la française"
+          />
+        </div>
+        <div class="restaurant-infos">
+          <div class="restaurant-name">À la française</div>
+          <div class="restaurant-favourite">
+            <!-- love checkbox -->
+            <input
+              type="checkbox"
+              name=""
+              id="restaurant-1-loved"
+              class="restaurant-love-cb"
+            />
+            <label for="restaurant-1-loved">
+              <span class="heart heart-empty">
+                <i class="fa-regular fa-heart"></i>
+              </span>
+
+              <span class="heart heart-filled">
+                <i class="fa-solid fa-heart"></i>
+              </span>
+
+              <span class="beam"></span>
+              <span class="beam"></span>
+              <span class="beam"></span>
+              <span class="beam"></span>
+              <span class="beam"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu -->
+
+      <!-- first course -->
+      <section class="menu-course">
+        <h3 class="course-title">Entrées</h3>
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Tartare de thon  
+            </p>
+            <p class="dish-details">
+                Assaisonné au yuzu
+            </p>
+          </div>
+          <div class="dish-price">25€</div>
+          <div class="dish-ordered">
+              
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                BOuchée de homard croustillant
+            </p>
+            <p class="dish-details">
+                Et sa farandole de petits légumes
+            </p>
+          </div>
+          <div class="dish-price">35€</div>
+          <div class="dish-ordered">
+            
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Velouté de cèpes
+            </p>
+            <p class="dish-details">
+              Aux truffes
+            </p>
+          </div>
+          <div class="dish-price">20€</div>
+          <div class="dish-ordered">
+          
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- main course -->
+      <section class="menu-course">
+        <h3 class="course-title">Plats</h3>
+        
+        <article class="dish">
+            <div class="dish-infos">
+              <p class="dish-name">
+                  Poulet rôti aux herbes de Provence
+              </p>
+              <p class="dish-details">
+                Et sa crème de truffe
+              </p>
+            </div>
+            <div class="dish-price">20€</div>
+            <div class="dish-ordered">
+            
+              <div class="dish-ordered-check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish">
+            <div class="dish-infos">
+              <p class="dish-name">
+                  Langouste rôtie
+              </p>
+              <p class="dish-details">
+                Et ses légumes de saison
+              </p>
+            </div>
+            <div class="dish-price">35€</div>
+            <div class="dish-ordered">
+            
+              <div class="dish-ordered-check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </article>
+          
+          <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Côte de bœuf Angus
+            </p>
+            <p class="dish-details">
+              Et sa purée de panais
+            </p>
+          </div>
+          <div class="dish-price">44€</div>
+          <div class="dish-ordered">
+            
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- dessert -->
+
+      <section class="menu-course">
+        <h3 class="course-title">Desserts</h3>
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Farandole de desserts     
+            </p>
+            <p class="dish-details">
+                Du chef
+            </p>
+          </div>
+          <div class="dish-price">18€</div>
+          <div class="dish-ordered">
+            
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Crème brûlée
+            </p>
+            <p class="dish-details">
+                Revisitée
+            </p>
+          </div>
+          <div class="dish-price">22€</div>
+          <div class="dish-ordered">
+            
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+        <article class="dish">
+          <div class="dish-infos">
+            <p class="dish-name">
+                Tiramisu
+            </p>
+            <p class="dish-details">
+                À la noisette
+            </p>
+          </div>
+          <div class="dish-price">23€</div>
+          <div class="dish-ordered">
+            
+            <div class="dish-ordered-check">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </article>
+      </section>
+      <button class="command-btn">Commander</button>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <h1>ohmyfood</h1>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-utensils"></i>
+            Proposer un restaurant
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-handshake-angle"></i>
+            Devenir partenaire
+          </a>
+        </li>
+        <li>
+          <a href="#"> Mentions légales </a>
+        </li>
+        <li>
+          <a href="mailto:contact@ohmyfood.fr"> Contact </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
