@@ -81,13 +81,24 @@ body{
 /* animation 2 : restaurant favourite */
 
 .restaurant-favourite{
-    label{
+    .restaurant-loved{
         --scale: 0;
         --beam-transY: 0rem;
 
         position: relative;
         cursor: pointer;
         font-size: 1.25rem;
+
+        &:hover{
+            .heart-filled{
+                display: inline;
+            }
+
+            .beam{
+                display: inline;
+            }
+
+        }
 
         .heart{
             position: absolute;
@@ -135,22 +146,6 @@ body{
             }
         }
     }
-
-    .restaurant-love-cb{
-        display:none;
-
-        ~label:hover, &:checked ~label{
-            .heart-filled{
-                display: inline;
-            }
-
-            .beam{
-                display: inline;
-            }
-
-        }
-    }
-
 }
 
 @keyframes beat-it {

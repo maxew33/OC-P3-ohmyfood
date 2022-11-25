@@ -58,8 +58,8 @@ a, a:visited {
 body {
   height: auto;
   overflow: hidden;
-  -webkit-animation: site-displayed 2072ms linear forwards;
-          animation: site-displayed 2072ms linear forwards;
+  -webkit-animation: site-displayed 2706ms linear forwards;
+          animation: site-displayed 2706ms linear forwards;
 }
 
 .loader {
@@ -72,8 +72,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 2072ms steps(1, end) forwards;
-          animation: loader-vanished 2072ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 2706ms steps(1, end) forwards;
+          animation: loader-vanished 2706ms steps(1, end) forwards;
 }
 
 .fork {
@@ -176,20 +176,26 @@ body {
   }
 }
 /* animation 2 : restaurant favourite */
-.restaurant-favourite label {
+.restaurant-favourite .restaurant-loved {
   --scale: 0;
   --beam-transY: 0rem;
   position: relative;
   cursor: pointer;
   font-size: 1.25rem;
 }
-.restaurant-favourite label .heart {
+.restaurant-favourite .restaurant-loved:hover .heart-filled {
+  display: inline;
+}
+.restaurant-favourite .restaurant-loved:hover .beam {
+  display: inline;
+}
+.restaurant-favourite .restaurant-loved .heart {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.restaurant-favourite label .heart-filled {
+.restaurant-favourite .restaurant-loved .heart-filled {
   z-index: 10;
   display: none;
   transform: translate(-50%, -50%) scale(0);
@@ -201,7 +207,7 @@ body {
   color: transparent;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-.restaurant-favourite label .beam {
+.restaurant-favourite .restaurant-loved .beam {
   position: absolute;
   width: 1px;
   height: 0.25rem;
@@ -209,28 +215,28 @@ body {
   top: calc(50% - 0.2rem);
   left: calc(50% - 1px);
 }
-.restaurant-favourite label .beam:nth-child(1) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(1) {
   transform: rotate(108deg);
 }
-.restaurant-favourite label .beam:nth-child(2) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(2) {
   transform: rotate(180deg);
 }
-.restaurant-favourite label .beam:nth-child(3) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(3) {
   transform: rotate(252deg);
 }
-.restaurant-favourite label .beam:nth-child(4) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(4) {
   transform: rotate(324deg);
 }
-.restaurant-favourite label .beam:nth-child(5) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(5) {
   transform: rotate(396deg);
 }
-.restaurant-favourite label .beam:nth-child(6) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(6) {
   transform: rotate(468deg);
 }
-.restaurant-favourite label .beam:nth-child(7) {
+.restaurant-favourite .restaurant-loved .beam:nth-child(7) {
   transform: rotate(540deg);
 }
-.restaurant-favourite label .beam::after {
+.restaurant-favourite .restaurant-loved .beam::after {
   content: "";
   height: inherit;
   width: inherit;
@@ -238,15 +244,6 @@ body {
   background: #9356dc;
   -webkit-animation: 0.25s beam-spread 0.1s linear forwards;
           animation: 0.25s beam-spread 0.1s linear forwards;
-}
-.restaurant-favourite .restaurant-love-cb {
-  display: none;
-}
-.restaurant-favourite .restaurant-love-cb ~ label:hover .heart-filled, .restaurant-favourite .restaurant-love-cb:checked ~ label .heart-filled {
-  display: inline;
-}
-.restaurant-favourite .restaurant-love-cb ~ label:hover .beam, .restaurant-favourite .restaurant-love-cb:checked ~ label .beam {
-  display: inline;
 }
 
 @-webkit-keyframes beat-it {
@@ -313,7 +310,7 @@ a.restaurant-link-btn, .command-btn {
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
 }
 a.restaurant-link-btn:hover, .command-btn:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0.0666666667) 0 0), radial-gradient(at top left, #ff79da, #9356dc);
+  background: linear-gradient(rgba(255, 255, 255, 0.0666666667) 100%, rgba(255, 255, 255, 0.0666666667) 0), radial-gradient(at top left, #ff79da, #9356dc);
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3333333333);
 }
 
