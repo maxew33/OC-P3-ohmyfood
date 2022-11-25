@@ -19,19 +19,26 @@ body{
     top:0;
     left: 0;
     z-index: 100;
-    background: #eee;
-    color: #222;
+    background: radial-gradient(at top left, $secondary, $primary);
+    color: #eee;
     height: 100vh;
     width: 100vw;
     font-family: $fontfam1;
     animation: loader-vanished $duration steps(1, end) forwards;
+}
 
+.fork{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .letter-container {
     position: absolute;
-    top: calc(50% - 3rem);
-    left: 50%;
+    top: calc(50% - 6rem);
+    left: calc(50% - .75rem);
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
@@ -39,7 +46,7 @@ body{
     transform-origin: center 6rem;
 }
 
-@for $i from 1 through 8 {
+@for $i from 2 through 9 {
     .letter-container:nth-child(#{$i}) {
         animation-delay: $loader-anim-delay * $i * -1;
     }
