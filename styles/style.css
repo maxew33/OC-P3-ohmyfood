@@ -58,8 +58,8 @@ a, a:visited {
 body {
   height: auto;
   overflow: hidden;
-  -webkit-animation: site-displayed 2275ms linear forwards;
-          animation: site-displayed 2275ms linear forwards;
+  -webkit-animation: site-displayed 2072ms linear forwards;
+          animation: site-displayed 2072ms linear forwards;
 }
 
 .loader {
@@ -72,8 +72,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 2275ms steps(1, end) forwards;
-          animation: loader-vanished 2275ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 2072ms steps(1, end) forwards;
+          animation: loader-vanished 2072ms steps(1, end) forwards;
 }
 
 .fork {
@@ -311,6 +311,10 @@ a.restaurant-link-btn, .command-btn {
   border-radius: 99rem;
   color: #fff;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
+}
+a.restaurant-link-btn:hover, .command-btn:hover {
+  background: linear-gradient(rgba(255, 255, 255, 0.0666666667) 0 0), radial-gradient(at top left, #ff79da, #9356dc);
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3333333333);
 }
 
 .command-btn {

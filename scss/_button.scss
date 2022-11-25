@@ -10,6 +10,11 @@ a.restaurant-link-btn, .command-btn{
     border-radius: 99rem;
     color: #fff;
     box-shadow: 0px 4px 5px 2px #0002;
+
+    &:hover{
+        background: linear-gradient(#fff1 0 0), radial-gradient(at top left, $secondary, $primary);
+        box-shadow: 0px 4px 5px 2px #0005;
+    }
 }
 
 .command-btn{
