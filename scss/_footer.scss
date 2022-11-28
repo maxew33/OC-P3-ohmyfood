@@ -1,19 +1,19 @@
-@import 'utils';
+@import "utils";
 
-footer{
+footer {
     background: $bg4;
     color: #fff;
     line-height: 2rem;
     padding: 2rem;
 
-    h1{
+    h1 {
         font-size: 1.25rem;
         font-family: shrikhand;
         overflow: hidden;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
     }
 
-    i{
+    i {
         width: 1.75rem;
     }
 }

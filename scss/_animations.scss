@@ -1,6 +1,5 @@
 @import "utils";
 
-
 /* animation 1 : loader */
 
 $loader-anim-dur: 2s;
@@ -8,15 +7,15 @@ $loader-anim-delay: 0.2s;
 
 $duration: (random(2000) + 1000) * 1ms;
 
-body{
-    height: auto; 
+body {
+    height: auto;
     overflow: hidden;
     animation: site-displayed $duration linear forwards;
 }
 
 .loader {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 100;
     background: radial-gradient(at top left, $secondary, $primary);
@@ -27,7 +26,7 @@ body{
     animation: loader-vanished $duration steps(1, end) forwards;
 }
 
-.fork{
+.fork {
     font-size: 2.5rem;
     position: absolute;
     top: 50%;
@@ -38,7 +37,7 @@ body{
 .letter-container {
     position: absolute;
     top: calc(50% - 6rem);
-    left: calc(50% - .75rem);
+    left: calc(50% - 0.75rem);
     font-size: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
@@ -61,27 +60,23 @@ body{
     }
 }
 
-
-@keyframes site-displayed{
-    to{
+@keyframes site-displayed {
+    to {
         height: auto;
         overflow: auto;
     }
 }
 
-@keyframes loader-vanished{
-    to{
+@keyframes loader-vanished {
+    to {
         transform: scale(0);
     }
 }
 
-
-
-
 /* animation 2 : restaurant favourite */
 
-.restaurant-favourite{
-    .restaurant-loved{
+.restaurant-favourite {
+    .restaurant-loved {
         --scale: 0;
         --beam-transY: 0rem;
 
@@ -89,18 +84,17 @@ body{
         cursor: pointer;
         font-size: 1.25rem;
 
-        &:hover{
-            .heart-filled{
+        &:hover {
+            .heart-filled {
                 display: inline;
             }
 
-            .beam{
+            .beam {
                 display: inline;
             }
-
         }
 
-        .heart{
+        .heart {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -108,72 +102,70 @@ body{
             // display: none;
         }
 
-        .heart-filled{
+        .heart-filled {
             // color: $heart-color;
             z-index: 10;
             display: none;
-            transform:  translate(-50%, -50%) scale(0);
-            animation: .25s beat-it linear forwards;
+            transform: translate(-50%, -50%) scale(0);
+            animation: 0.25s beat-it linear forwards;
             background: linear-gradient($primary, $secondary);
             background-clip: text;
             color: transparent;
             -webkit-text-fill-color: #0000;
         }
 
-        .beam{
+        .beam {
             position: absolute;
             width: 1px;
-            height: .25rem;
+            height: 0.25rem;
 
             display: none;
 
-            top: calc(50% - .2rem);
+            top: calc(50% - 0.2rem);
             left: calc(50% - 1px);
 
-            @for $i from 1 through 7{
-                &:nth-child(#{$i}){
-                    transform: rotate(72deg * ($i +.5));
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                    transform: rotate(72deg * ($i + 0.5));
                 }
             }
 
-            &::after{
-                content:"";
+            &::after {
+                content: "";
                 height: inherit;
                 width: inherit;
                 position: absolute;
-                background: $primary;             
-                animation: .25s beam-spread .1s linear forwards;
+                background: $primary;
+                animation: 0.25s beam-spread 0.1s linear forwards;
             }
         }
     }
 }
 
 @keyframes beat-it {
-    0%{
-        transform:  translate(-50%, -50%) scale(0);
+    0% {
+        transform: translate(-50%, -50%) scale(0);
     }
-    80%{
-        transform:  translate(-50%, -50%) scale(1.3);
+    80% {
+        transform: translate(-50%, -50%) scale(1.3);
     }
-    100%{
-        transform:  translate(-50%, -50%) scale(1);
-    }    
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 @keyframes beam-spread {
-    0%{
-        opacity:1;
-        transform: translateY(0rem)
-
+    0% {
+        opacity: 1;
+        transform: translateY(0rem);
     }
-    90%{
-        opacity:1;
-        transform: translateY(1rem)
+    90% {
+        opacity: 1;
+        transform: translateY(1rem);
     }
 
-    100%{
+    100% {
         opacity: 0;
-        transform: translateY(1.25rem)
+        transform: translateY(1.25rem);
     }
-    
 }

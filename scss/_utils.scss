@@ -22,3 +22,20 @@ $fontfam1: shrikhand;
     height: 100%;
     object-fit: cover;
 }
+
+@mixin btn-hover{
+    &:hover{
+        box-shadow: 0px 4px 5px 2px #0005;
+        &::after{
+            content:"";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff2;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+    }
+}

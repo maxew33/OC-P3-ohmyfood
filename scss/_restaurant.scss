@@ -1,12 +1,12 @@
 @import "utils";
 
-$delay: .25s;
-$duration: .5s;
+$delay: 0.25s;
+$duration: 0.5s;
 /* restaurant-style */
 
 /* restaurant-banner */
 
-.restaurant-banner{
+.restaurant-banner {
     margin-bottom: -40px;
 }
 
@@ -53,6 +53,27 @@ $duration: .5s;
     }
 }
 
+/* displaying course delay */
+.menu-course {
+    > * {
+        width: 90%;
+    }
+
+    &:not(:nth-child(2)) {
+        padding-top: 25px;
+    }
+
+    @for $i from 2 through 4 {
+        &:nth-child(#{$i}) {
+            @for $j from 2 through 5 {
+                .dish:nth-child(#{$j}) {
+                    animation-delay: (($j - 2) + (($i - 2) * 4)) * $delay;
+                }
+            }
+        }
+    }
+}
+
 .dish {
     cursor: pointer;
     position: relative;
@@ -83,33 +104,11 @@ $duration: .5s;
     }
 }
 
-    /* displaying course delay */
-.menu-course {
-
-    >*{
-        width: 90%;
-    }
-
-    &:not(:nth-child(2)){
-        padding-top: 25px;
-    }
-
-    @for $i from 2 through 4 {
-        &:nth-child(#{$i}) {
-            @for $j from 2 through 5 {
-                .dish:nth-child(#{$j}) {
-                    animation-delay: (($j - 2) + (($i - 2) * 4)) * $delay;
-                }
-            }
-        }
-    }
-}
-
 .dish-infos {
     width: 80%;
     padding: 0.5rem 0.75rem;
 
-    transition: 0.25s width linear;
+    transition: 0.25s width .1s linear;
 
     .dish-name {
         font-weight: bold;
@@ -117,7 +116,7 @@ $duration: .5s;
         padding-bottom: 0.75rem;
     }
 
-    p {
+    p, h4 {
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
@@ -144,7 +143,7 @@ $duration: .5s;
     background: $tertiary;
     color: white;
     font-size: 1.25rem;
-    transition: 0.25s transform 0.1s linear;
+    transition: 0.25s transform .05s linear;
     display: grid;
     place-content: center;
 

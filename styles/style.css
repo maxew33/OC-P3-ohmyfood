@@ -1,17 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,8 +89,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -30,16 +107,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -49,7 +130,8 @@ table {
   border-spacing: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
   text-decoration: none;
 }
@@ -58,8 +140,8 @@ a, a:visited {
 body {
   height: auto;
   overflow: hidden;
-  -webkit-animation: site-displayed 2706ms linear forwards;
-          animation: site-displayed 2706ms linear forwards;
+  -webkit-animation: site-displayed 1543ms linear forwards;
+          animation: site-displayed 1543ms linear forwards;
 }
 
 .loader {
@@ -72,8 +154,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 2706ms steps(1, end) forwards;
-          animation: loader-vanished 2706ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 1543ms steps(1, end) forwards;
+          animation: loader-vanished 1543ms steps(1, end) forwards;
 }
 
 .fork {
@@ -298,7 +380,9 @@ body {
   }
 }
 /* buttons */
-a.restaurant-link-btn, .command-btn {
+a.restaurant-link-btn,
+.command-btn {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -309,9 +393,21 @@ a.restaurant-link-btn, .command-btn {
   color: #fff;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
 }
-a.restaurant-link-btn:hover, .command-btn:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0.0666666667) 100%, rgba(255, 255, 255, 0.0666666667) 0), radial-gradient(at top left, #ff79da, #9356dc);
+a.restaurant-link-btn:hover,
+.command-btn:hover {
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3333333333);
+}
+a.restaurant-link-btn:hover::after,
+.command-btn:hover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1333333333);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .command-btn {
@@ -368,21 +464,19 @@ footer i {
   width: 1.75rem;
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 /* Home Page */
 .home-main section:not(:nth-child(1)) {
-  padding: 0 2rem;
+  padding: 0 1.25rem;
+}
+.home-main h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .banner {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 15rem;
   padding-bottom: 1.5rem;
 }
 .banner > * {
@@ -408,7 +502,7 @@ h2 {
   background: rgba(0, 0, 0, 0);
 }
 .banner h2 {
-  padding: 0 2rem;
+  padding: 2rem 4rem 1.5rem;
   line-height: 2rem;
 }
 .banner p {
@@ -417,12 +511,15 @@ h2 {
 
 .instructions {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.25rem 0;
+  margin: 40px 0;
   background: #fff;
-  height: 440px;
 }
 .instructions h2 {
+  width: 100%;
   padding-top: 1.25rem;
 }
 
@@ -434,6 +531,7 @@ h2 {
   padding: 1.75rem 0;
   border-radius: 20px;
   background: #f7f7f7;
+  width: 100%;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
   cursor: pointer;
   transition: background-color 0.25s ease-in-out;
@@ -470,17 +568,24 @@ h2 {
 
 #restaurants {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 1220px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.25rem 0;
+  margin: 40px 0;
+}
+#restaurants h2 {
+  width: 100%;
 }
 
 .restaurant {
+  position: relative;
   height: 250px;
   width: 100%;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.1333333333);
+  cursor: pointer;
 }
 .restaurant .restaurant-img-container {
   position: relative;
@@ -500,7 +605,7 @@ h2 {
   top: 1rem;
   right: 1rem;
   color: #008766;
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 2px;
   padding: 0.5rem 1rem;
 }
@@ -522,6 +627,20 @@ h2 {
 }
 .restaurant .restaurant-description-container .restaurant-place {
   font-size: 0.9rem;
+}
+.restaurant:hover {
+  box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3333333333);
+}
+.restaurant:hover::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.1333333333);
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 /* restaurant-style */
@@ -571,32 +690,6 @@ h2 {
   height: 3px;
   width: 2.5rem;
   background: #99e2d0;
-}
-
-.dish {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem auto;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.1450980392);
-  -webkit-animation: 0.5s fade-in forwards;
-          animation: 0.5s fade-in forwards;
-  opacity: 0;
-  transform: translateY(10px);
-  overflow: hidden;
-  /* hover animation */
-}
-.dish:hover .dish-infos {
-  width: calc(80% - 3rem);
-}
-.dish:hover .dish-ordered {
-  transform: translate(0px, -50%);
-}
-.dish:hover .dish-ordered > .dish-ordered-check {
-  transform: rotate(360deg);
 }
 
 /* displaying course delay */
@@ -655,17 +748,43 @@ h2 {
           animation-delay: 2.75s;
 }
 
+.dish {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.1450980392);
+  -webkit-animation: 0.5s fade-in forwards;
+          animation: 0.5s fade-in forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  overflow: hidden;
+  /* hover animation */
+}
+.dish:hover .dish-infos {
+  width: calc(80% - 3rem);
+}
+.dish:hover .dish-ordered {
+  transform: translate(0px, -50%);
+}
+.dish:hover .dish-ordered > .dish-ordered-check {
+  transform: rotate(360deg);
+}
+
 .dish-infos {
   width: 80%;
   padding: 0.5rem 0.75rem;
-  transition: 0.25s width linear;
+  transition: 0.25s width 0.1s linear;
 }
 .dish-infos .dish-name {
   font-weight: bold;
   font-size: 1.25rem;
   padding-bottom: 0.75rem;
 }
-.dish-infos p {
+.dish-infos p, .dish-infos h4 {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -691,7 +810,7 @@ h2 {
   background: #99e2d0;
   color: white;
   font-size: 1.25rem;
-  transition: 0.25s transform 0.1s linear;
+  transition: 0.25s transform 0.05s linear;
   display: grid;
   place-content: center;
 }
@@ -713,13 +832,42 @@ h2 {
     transform: translateY(0);
   }
 }
+@media (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
+  .instructions {
+    height: auto;
+    gap: 1.25rem;
+  }
+  .instructions h2 {
+    text-align: center;
+  }
+  .instructions .instruction-card {
+    width: 45%;
+  }
+  #restaurants h2 {
+    text-align: center;
+  }
+  .restaurant {
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .instructions .instruction-card {
+    width: max(30%, 350px);
+  }
+  .restaurant {
+    width: 22.5%;
+  }
+}
 html {
   background: rgba(0, 0, 255, 0.3333333333);
   scroll-behavior: smooth;
 }
 
 body {
-  width: min(100%, 375px);
+  width: min(100%, 1300px);
   margin: auto;
   background: #f7f7f7;
   font-family: roboto, sans-serif;
