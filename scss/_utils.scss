@@ -7,6 +7,16 @@ $bg3: #eaeaea;
 $bg4: #353535;
 $fontfam1: shrikhand;
 
+// mixin for the cards container => instructions and restaurants container for the index page, menu course for the restaurant pages
+@mixin cards-container{    
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.25rem 0;
+    // margin: 40px 0;
+}
+
 @mixin box-shadow {
     box-shadow: 0px 4px 5px 2px #0002;
 }

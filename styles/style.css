@@ -140,8 +140,8 @@ a:visited {
 body {
   height: auto;
   overflow: hidden;
-  -webkit-animation: site-displayed 1543ms linear forwards;
-          animation: site-displayed 1543ms linear forwards;
+  -webkit-animation: site-displayed 1768ms linear forwards;
+          animation: site-displayed 1768ms linear forwards;
 }
 
 .loader {
@@ -154,8 +154,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 1543ms steps(1, end) forwards;
-          animation: loader-vanished 1543ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 1768ms steps(1, end) forwards;
+          animation: loader-vanished 1768ms steps(1, end) forwards;
 }
 
 .fork {
@@ -493,13 +493,30 @@ footer i {
   place-content: center;
   background: #eaeaea;
 }
-.banner .place .place-search {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(50%, -50%);
+.banner .place #town-input {
+  color: #000;
+  font-weight: bold;
+  margin-left: 1.5rem;
+}
+.banner .place #town-input::-moz-placeholder {
+  color: inherit;
+  font-weight: inherit;
+}
+.banner .place #town-input:-ms-input-placeholder {
+  color: inherit;
+  font-weight: inherit;
+}
+.banner .place #town-input::placeholder {
+  color: inherit;
+  font-weight: inherit;
+}
+.banner .place .geoloc {
+  cursor: pointer;
+}
+.banner .place #town-input, .banner .place .geoloc {
   border: none;
-  background: rgba(0, 0, 0, 0);
+  background: inherit;
+  font-size: inherit;
 }
 .banner h2 {
   padding: 2rem 4rem 1.5rem;
@@ -510,7 +527,7 @@ footer i {
 }
 
 .instructions {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -557,7 +574,7 @@ footer i {
   font-size: 0.75rem;
 }
 .instruction-card .instruction-icon {
-  padding: 0 1.75rem 0 2.5rem;
+  padding: 0 1.5rem 0 2.25rem;
   color: #7e7e7e;
   font-size: 1.25rem;
   transition: color 0.25s ease-in-out;
@@ -567,7 +584,7 @@ footer i {
 }
 
 #restaurants {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -692,7 +709,15 @@ footer i {
   background: #99e2d0;
 }
 
-/* displaying course delay */
+.menu-course {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.25rem 0;
+  width: 100%;
+  /* displaying course delay */
+}
 .menu-course > * {
   width: 90%;
 }
@@ -753,7 +778,6 @@ footer i {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 1rem auto;
   background: #fff;
   border-radius: 15px;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.1450980392);
@@ -784,7 +808,8 @@ footer i {
   font-size: 1.25rem;
   padding-bottom: 0.75rem;
 }
-.dish-infos p, .dish-infos h4 {
+.dish-infos p,
+.dish-infos h4 {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -798,6 +823,7 @@ footer i {
   align-items: flex-end;
   padding: 0.5rem 0;
   font-weight: bold;
+  transition: 0.25s width 0.1s linear;
 }
 
 .dish-ordered {
@@ -836,6 +862,7 @@ footer i {
   :root {
     font-size: 20px;
   }
+  /* index page*/
   .instructions {
     height: auto;
     gap: 1.25rem;
@@ -854,20 +881,48 @@ footer i {
   }
 }
 @media (min-width: 1024px) {
+  /* index page */
   .instructions .instruction-card {
     width: max(30%, 350px);
   }
   .restaurant {
     width: 22.5%;
   }
+  /*restaurant page*/
+  .menu-course {
+    width: 33%;
+  }
+  .dish-infos {
+    width: 90%;
+  }
+  .dish-price {
+    width: 90%;
+    justify-content: flex-end;
+  }
+  .dish:hover .dish-infos {
+    width: calc(90% - 3rem);
+  }
+  .dish:hover .dish-price {
+    width: calc(90% - 3rem);
+  }
+  .command-btn {
+    margin: 2.5rem;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+  }
+  /* footer */
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 html {
-  background: rgba(0, 0, 255, 0.3333333333);
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0) 33vw 66vw, #fff), #9356dc;
   scroll-behavior: smooth;
 }
 
 body {
-  width: min(100%, 1300px);
+  max-width: 1300px;
   margin: auto;
   background: #f7f7f7;
   font-family: roboto, sans-serif;

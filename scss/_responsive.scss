@@ -3,6 +3,8 @@
         font-size: 20px;
     }
 
+    /* index page*/
+
     .instructions {
         height: auto;
         gap: 1.25rem;
@@ -25,9 +27,12 @@
     .restaurant {
         width: 45%;
     }
+
 }
 
 @media (min-width: 1024px) {
+
+    /* index page */
     .instructions {
         .instruction-card {
             width: max(30%, 350px);
@@ -37,4 +42,44 @@
     .restaurant {
         width: 22.5%;
     }
+
+    /*restaurant page*/
+    .menu-course{
+        width: 33%;
+    }
+    
+    .dish-infos{
+        width: 90%;
+    }
+
+    .dish-price {
+        width: 90%;
+        justify-content: flex-end;
+    }
+
+        .dish{
+        &:hover {
+            .dish-infos {
+                width: calc(90% - 3rem);
+            }
+            .dish-price {
+                width: calc(90% - 3rem);
+            }
+        }
+    }
+
+    .command-btn{
+        margin: 2.5rem;
+        padding: 2rem 4rem;
+        font-size: 1.5rem;
+    }
+
+    
+    /* footer */
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }

@@ -53,8 +53,10 @@ $duration: 0.5s;
     }
 }
 
-/* displaying course delay */
 .menu-course {
+    @include cards-container;
+    width: 100%;
+
     > * {
         width: 90%;
     }
@@ -63,6 +65,7 @@ $duration: 0.5s;
         padding-top: 25px;
     }
 
+    /* displaying course delay */
     @for $i from 2 through 4 {
         &:nth-child(#{$i}) {
             @for $j from 2 through 5 {
@@ -79,7 +82,7 @@ $duration: 0.5s;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem auto;
+    // margin: 1rem auto;
     background: #fff;
     border-radius: 15px;
     box-shadow: 2px 2px 8px 0 #00000025;
@@ -108,7 +111,7 @@ $duration: 0.5s;
     width: 80%;
     padding: 0.5rem 0.75rem;
 
-    transition: 0.25s width .1s linear;
+    transition: 0.25s width 0.1s linear;
 
     .dish-name {
         font-weight: bold;
@@ -116,7 +119,8 @@ $duration: 0.5s;
         padding-bottom: 0.75rem;
     }
 
-    p, h4 {
+    p,
+    h4 {
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
@@ -131,6 +135,7 @@ $duration: 0.5s;
     align-items: flex-end;
     padding: 0.5rem 0;
     font-weight: bold;
+    transition: 0.25s width 0.1s linear;
 }
 
 .dish-ordered {
@@ -143,7 +148,7 @@ $duration: 0.5s;
     background: $tertiary;
     color: white;
     font-size: 1.25rem;
-    transition: 0.25s transform .05s linear;
+    transition: 0.25s transform 0.05s linear;
     display: grid;
     place-content: center;
 

@@ -35,13 +35,29 @@
         place-content: center;
         background: $bg3;
 
-        .place-search {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(50%, -50%);
+        #town-input{
+            color: #000;
+            font-weight: bold;
+            margin-left: 1.5rem;            
+
+            &::placeholder{
+                color: inherit;
+                font-weight: inherit;
+            }
+        }
+
+        .geoloc{
+            cursor: pointer;
+        }
+
+        #town-input, .geoloc {
+            // position: absolute;
+            // top: 50%;
+            // left: 0;
+            // transform: translate(50%, -50%);
             border: none;
-            background: #0000;
+            background: inherit;
+            font-size: inherit;
         }
     }
 
@@ -57,12 +73,8 @@
 
 // instructions
 
-.instructions {    
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.25rem 0;
+.instructions {   
+    @include cards-container;
     margin: 40px 0;
 
     background: $bg2;
@@ -112,7 +124,7 @@
     }
 
     .instruction-icon {
-        padding: 0 1.75rem 0 2.5rem;
+        padding: 0 1.5rem 0 2.25rem;
         color: #7e7e7e;
         font-size: 1.25rem;
         transition: color 0.25s ease-in-out;
@@ -126,13 +138,10 @@
 // restaurants
 
 #restaurants {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    // height: 1220px;
-    flex-wrap: wrap;
-    gap: 1.25rem 0;
+
+    @include cards-container;
     margin: 40px 0;
+
     h2{
         width: 100%;
     }

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap'), 'reset', 'animations', 'button', 'header', 'footer', 'index', 'restaurant', 'responsive';
 
 html{
-    background: #00f5;
+    background: linear-gradient( 90deg,#fff , #fff0 33vw 66vw, #fff), $primary;
     scroll-behavior: smooth;
 }
 
 body{
-    width: min(100%, 1300px);
+    // width: min(100%, 1300px);
+    max-width: 1300px;
     margin: auto;
     background: $bg1;
     font-family: roboto, sans-serif;
