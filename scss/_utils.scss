@@ -9,12 +9,12 @@ $fontfam1: shrikhand;
 
 // mixin for the cards container => instructions and restaurants container for the index page, menu course for the restaurant pages
 @mixin cards-container{    
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.25rem 0;
-    // margin: 40px 0;
+    margin: 40px 0;
 }
 
 @mixin box-shadow {

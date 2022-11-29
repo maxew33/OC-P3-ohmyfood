@@ -75,7 +75,6 @@
 
 .instructions {   
     @include cards-container;
-    margin: 40px 0;
 
     background: $bg2;
 
@@ -140,7 +139,6 @@
 #restaurants {
 
     @include cards-container;
-    margin: 40px 0;
 
     h2{
         width: 100%;

@@ -55,6 +55,8 @@ $duration: 0.5s;
 
 .menu-course {
     @include cards-container;
+    margin: 0;
+    display: inline-flex;
     width: 100%;
 
     > * {

@@ -140,8 +140,8 @@ a:visited {
 body {
   height: auto;
   overflow: hidden;
-  -webkit-animation: site-displayed 1768ms linear forwards;
-          animation: site-displayed 1768ms linear forwards;
+  -webkit-animation: site-displayed 1902ms linear forwards;
+          animation: site-displayed 1902ms linear forwards;
 }
 
 .loader {
@@ -154,8 +154,8 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 1768ms steps(1, end) forwards;
-          animation: loader-vanished 1768ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 1902ms steps(1, end) forwards;
+          animation: loader-vanished 1902ms steps(1, end) forwards;
 }
 
 .fork {
@@ -527,7 +527,7 @@ footer i {
 }
 
 .instructions {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -584,7 +584,7 @@ footer i {
 }
 
 #restaurants {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -710,11 +710,14 @@ footer i {
 }
 
 .menu-course {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 1.25rem 0;
+  margin: 40px 0;
+  margin: 0;
+  display: inline-flex;
   width: 100%;
   /* displaying course delay */
 }
@@ -917,7 +920,6 @@ footer i {
   }
 }
 html {
-  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0) 33vw 66vw, #fff), #9356dc;
   scroll-behavior: smooth;
 }
 
@@ -926,4 +928,5 @@ body {
   margin: auto;
   background: #f7f7f7;
   font-family: roboto, sans-serif;
+  box-shadow: 0 0 10vw black;
 }/*# sourceMappingURL=style.css.map */
