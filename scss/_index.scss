@@ -17,7 +17,6 @@
 
 .banner {
     @include flex-col-se;
-    // height: 15rem;
     padding-bottom: 1.5rem;
 
     > * {
@@ -27,12 +26,8 @@
     .place {
         position: relative;
         display: flex;
-        width: 100%;
-        flex: 1;
-        font-size: 1rem;
-        padding: 12px 0;
-        display: flex;
         place-content: center;
+        padding: 12px 0;
         background: $bg3;
 
         #town-input{
@@ -51,10 +46,6 @@
         }
 
         #town-input, .geoloc {
-            // position: absolute;
-            // top: 50%;
-            // left: 0;
-            // transform: translate(50%, -50%);
             border: none;
             background: inherit;
             font-size: inherit;
@@ -75,7 +66,6 @@
 
 .instructions {   
     @include cards-container;
-
     background: $bg2;
 
     h2 {
@@ -85,14 +75,13 @@
 }
 
 .instruction-card {
-    $bg: $bg1;
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
     padding: 1.75rem 0;
     border-radius: 20px;
-    background: $bg;
+    background: $bg1;
     width: 100%;
 
     @include box-shadow;
@@ -114,12 +103,12 @@
         background: $primary;
         border-radius: 50%;
         height: 1.5rem;
-        text-align: center;
-        line-height: 1.5rem;
         aspect-ratio: 1/1;
-        color: #fff;
-        z-index: 10;
+        line-height: 1.5rem;
         font-size: 0.75rem;
+        color: #fff;
+        text-align: center;
+        z-index: 10;
     }
 
     .instruction-icon {
@@ -189,7 +178,6 @@
         }
 
         .restaurant-name {
-            // font-size: 1rem;
             font-weight: bold;
         }
 

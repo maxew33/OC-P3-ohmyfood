@@ -2,41 +2,49 @@
 
 /* animation 1 : loader */
 
+$duration: (random(2000) + 1000) * 1ms;// time before vanishing
+
+// text animation variables
 $loader-anim-dur: 2s;
 $loader-anim-delay: 0.2s;
 
-$duration: (random(2000) + 1000) * 1ms;
 
-body {
-    height: auto;
-    overflow: hidden;
-    animation: site-displayed $duration linear forwards;
-}
-
+/* loader container */
 .loader {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     z-index: 100;
-    background: radial-gradient(at top left, $secondary, $primary);
-    color: #eee;
-    height: 100vh;
-    width: 100vw;
+    background: $bg2;
+    color: $primary;
     font-family: $fontfam1;
     animation: loader-vanished $duration steps(1, end) forwards;
 }
 
+@keyframes loader-vanished {
+    to {
+        transform: scale(0);
+    }
+}
+
+/* loader content */
 .fork {
     font-size: 2.5rem;
     position: absolute;
-    top: 50%;
+    display: grid;
+    place-content: center;
+    top: 50vh;
     left: 50%;
+    color: #fff;
+    border-radius: 99px;
+    width: 7.5rem;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient($secondary 50%, $primary 52%);
     transform: translate(-50%, -50%);
 }
 
 .letter-container {
     position: absolute;
-    top: calc(50% - 6rem);
+    top: calc(50vh - 6rem);
     left: calc(50% - 0.75rem);
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -60,18 +68,6 @@ body {
     }
 }
 
-@keyframes site-displayed {
-    to {
-        height: auto;
-        overflow: auto;
-    }
-}
-
-@keyframes loader-vanished {
-    to {
-        transform: scale(0);
-    }
-}
 
 /* animation 2 : restaurant favourite */
 
@@ -99,11 +95,9 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // display: none;
         }
 
         .heart-filled {
-            // color: $heart-color;
             z-index: 10;
             display: none;
             transform: translate(-50%, -50%) scale(0);

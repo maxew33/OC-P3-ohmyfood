@@ -2,7 +2,8 @@
 
 $delay: 0.25s;
 $duration: 0.5s;
-/* restaurant-style */
+
+/* restaurant page */
 
 /* restaurant-banner */
 
@@ -42,6 +43,8 @@ $duration: 0.5s;
     position: relative;
     text-transform: uppercase;
     margin: 0 auto;
+
+    //title underline
     &::after {
         content: "";
         position: absolute;
@@ -84,7 +87,6 @@ $duration: 0.5s;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    // margin: 1rem auto;
     background: #fff;
     border-radius: 15px;
     box-shadow: 2px 2px 8px 0 #00000025;
@@ -94,7 +96,6 @@ $duration: 0.5s;
     overflow: hidden;
 
     /* hover animation */
-
     &:hover {
         .dish-infos {
             width: calc(80% - 3rem);

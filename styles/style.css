@@ -137,38 +137,48 @@ a:visited {
 }
 
 /* animation 1 : loader */
-body {
-  height: auto;
-  overflow: hidden;
-  -webkit-animation: site-displayed 1902ms linear forwards;
-          animation: site-displayed 1902ms linear forwards;
-}
-
+/* loader container */
 .loader {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 100;
-  background: radial-gradient(at top left, #ff79da, #9356dc);
-  color: #eee;
-  height: 100vh;
-  width: 100vw;
+  background: #fff;
+  color: #9356dc;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 1902ms steps(1, end) forwards;
-          animation: loader-vanished 1902ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 1028ms steps(1, end) forwards;
+          animation: loader-vanished 1028ms steps(1, end) forwards;
 }
 
+@-webkit-keyframes loader-vanished {
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes loader-vanished {
+  to {
+    transform: scale(0);
+  }
+}
+/* loader content */
 .fork {
   font-size: 2.5rem;
   position: absolute;
-  top: 50%;
+  display: grid;
+  place-content: center;
+  top: 50vh;
   left: 50%;
+  color: #fff;
+  border-radius: 99px;
+  width: 7.5rem;
+  aspect-ratio: 1/1;
+  background: radial-gradient(#ff79da 50%, #9356dc 52%);
   transform: translate(-50%, -50%);
 }
 
 .letter-container {
   position: absolute;
-  top: calc(50% - 6rem);
+  top: calc(50vh - 6rem);
   left: calc(50% - 0.75rem);
   font-size: 1.5rem;
   line-height: 1.5rem;
@@ -233,28 +243,6 @@ body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes site-displayed {
-  to {
-    height: auto;
-    overflow: auto;
-  }
-}
-@keyframes site-displayed {
-  to {
-    height: auto;
-    overflow: auto;
-  }
-}
-@-webkit-keyframes loader-vanished {
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes loader-vanished {
-  to {
-    transform: scale(0);
   }
 }
 /* animation 2 : restaurant favourite */
@@ -485,12 +473,8 @@ footer i {
 .banner .place {
   position: relative;
   display: flex;
-  width: 100%;
-  flex: 1;
-  font-size: 1rem;
-  padding: 12px 0;
-  display: flex;
   place-content: center;
+  padding: 12px 0;
   background: #eaeaea;
 }
 .banner .place #town-input {
@@ -566,12 +550,12 @@ footer i {
   background: #9356dc;
   border-radius: 50%;
   height: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
   aspect-ratio: 1/1;
-  color: #fff;
-  z-index: 10;
+  line-height: 1.5rem;
   font-size: 0.75rem;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
 }
 .instruction-card .instruction-icon {
   padding: 0 1.5rem 0 2.25rem;
@@ -660,7 +644,7 @@ footer i {
   pointer-events: none;
 }
 
-/* restaurant-style */
+/* restaurant page */
 /* restaurant-banner */
 .restaurant-banner {
   margin-bottom: -40px;
@@ -924,6 +908,7 @@ html {
 }
 
 body {
+  position: relative;
   max-width: 1300px;
   margin: auto;
   background: #f7f7f7;
