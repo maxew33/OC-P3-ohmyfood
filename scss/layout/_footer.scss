@@ -1,0 +1,32 @@
+@import "../utils/mixins", "../utils/variables";
+
+footer {
+    background: $bg4;
+    color: #fff;
+    line-height: 2rem;
+    padding: 2rem 2rem 0 2rem;
+
+    h2 {
+        font-size: 1.25rem;
+        font-family: shrikhand;
+        overflow: hidden;
+        padding-bottom: 0.5rem;
+    }
+
+    i {
+        width: 1.75rem;
+    }
+}
+
+/* responsive */
+
+@media (min-width: 1024px) {
+    footer {
+        padding-bottom: 1.5rem;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+        }
+    }
+}

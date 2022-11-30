@@ -1,4 +1,4 @@
-@import "utils";
+@import 'variables';
 
 /* animation 1 : loader */
 
@@ -11,8 +11,9 @@ $loader-anim-delay: 0.2s;
 
 /* loader container */
 .loader {
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     z-index: 100;
     background: $bg2;
     color: $primary;
@@ -79,6 +80,7 @@ $loader-anim-delay: 0.2s;
         position: relative;
         cursor: pointer;
         font-size: 1.25rem;
+        width: 1.5rem;
 
         &:hover {
             .heart-filled {

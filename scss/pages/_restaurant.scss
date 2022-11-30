@@ -1,4 +1,4 @@
-@import "utils";
+@import "../utils/mixins", "../utils/variables";
 
 $delay: 0.25s;
 $duration: 0.5s;
@@ -28,11 +28,12 @@ $duration: 0.5s;
     background: $bg1;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding: 0 5%;
 
     .restaurant-name {
         font-size: 1.75rem;
         font-family: $fontfam1;
+        padding-right: 1rem;
     }
 }
 
@@ -60,7 +61,11 @@ $duration: 0.5s;
     @include cards-container;
     margin: 0;
     display: inline-flex;
+    position: relative;
     width: 100%;
+    max-width: 768px;
+    left: 50%;
+    transform: translate(-50%);
 
     > * {
         width: 90%;
@@ -165,5 +170,52 @@ $duration: 0.5s;
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* reponsive */
+
+@media (min-width: 1024px) {
+
+    .menu-course{
+        width: 33%;
+        left: 0;
+        transform: none;
+    }
+    
+    .dish-infos{
+        width: 90%;
+
+        .dish-name{
+            font-size: 1rem;
+        }
+
+        p{
+            font-size: .8rem;
+        }
+    }
+
+    .dish-price {
+        width: 90%;
+        justify-content: flex-end;
+    }
+
+        .dish{
+        &:hover {
+            .dish-infos {
+                width: calc(90% - 3rem);
+            }
+            .dish-price {
+                width: calc(90% - 3rem);
+            }
+        }
+    }
+
+    .command-btn{
+        left: 35%;
+        width: 30%;
+        margin: 2.5rem 0;
+        padding: 1.25rem 2.5rem;
+        font-size: 1.25rem;
     }
 }

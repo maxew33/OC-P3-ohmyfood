@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap'), 'reset', 'animations', 'button', 'header', 'footer', 'index', 'restaurant', 'responsive';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap'), './base/reset', './components/button', './layout/footer', './layout/header', './pages/index', './pages/restaurant', './utils/animations';
 
 html{
     scroll-behavior: smooth;
@@ -6,9 +6,17 @@ html{
 
 body{
     position: relative;
-    max-width: 1300px;
+    max-width: 1600px;
     margin: auto;
     background: $bg1;
     font-family: roboto, sans-serif;
     box-shadow: 0 0 10vw black;
+}
+
+/* responsive */
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 20px;
+    }
 }

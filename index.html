@@ -3,8 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ohmyfood</title> 
+
+    <!-- Primary Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood</title>
+    <meta name="Description" content="ohmyfood vous permet de commander en ligne votre repas et réduit l'attente sur place.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxew33.github.io/ohmyfood/index.html">
+    <meta property="og:title" content="ohmyfood">
+    <meta property="og:description" content="ohmyfood vous permet de commander en ligne votre repas et réduit l'attente sur place.">
+    <meta property="og:image" content="https://maxew33.github.io/ohmyfood/images/mark-pecar-CNdjopTC1qA-unsplash-768w">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://maxew33.github.io/ohmyfood/index.html">
+    <meta property="twitter:title" content="ohmyfood">
+    <meta property="twitter:description" content="ohmyfood vous permet de commander en ligne votre repas et réduit l'attente sur place.">
+    <meta property="twitter:image" content="https://maxew33.github.io/ohmyfood/images/mark-pecar-CNdjopTC1qA-unsplash-768w">
+
     <link rel="stylesheet" href="styles/style.css">
     <script
       src="https://kit.fontawesome.com/a53308940c.js"
@@ -38,9 +56,9 @@
       <!-- banner -->
       <section class="banner">
         <div class="place">
-          <button class="geoloc">
+          <label for="town-input" class="geoloc">
             <i class="fa-solid fa-location-dot"></i>
-          </button>
+          </label>
           <input type="text" 
           id="town-input" 
           name="town-input" 
@@ -59,30 +77,31 @@
       <!-- instructions -->
       <section class="instructions">
         <h2>Fonctionnement</h2>
-        
-        <div class="instruction-card">
-          <div class="instruction-step">1</div>
-          <span class="instruction-icon">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </span>
-          <span class="instruction-txt"> Choisissez un restaurant </span>
-        </div>
-        
-        <div class="instruction-card">
-          <div class="instruction-step">2</div>
-          <span class="instruction-icon">
-            <i class="fa-solid fa-list-ul"></i>
-          </span>
-          <span class="instruction-txt"> Composez votre menu </span>
-        </div>
-        
-        <div class="instruction-card">
-          <div class="instruction-step">3</div>
-          <span class="instruction-icon">
-            <i class="fa-solid fa-store"></i>
-          </span>
-          <span class="instruction-txt"> Dégustez au restaurant </span>
-        </div>
+        <ul class="instruction-cards">
+          <li class="instruction-card">
+            <span class="instruction-step">1</span>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </span>
+            <span class="instruction-txt"> Choisissez un restaurant </span>
+          </li>
+          
+          <li class="instruction-card">
+            <span class="instruction-step">2</span>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-list-ul"></i>
+            </span>
+            <span class="instruction-txt"> Composez votre menu </span>
+          </li>
+          
+          <li class="instruction-card">
+            <span class="instruction-step">3</span>
+            <span class="instruction-icon">
+              <i class="fa-solid fa-store"></i>
+            </span>
+            <span class="instruction-txt"> Dégustez au restaurant </span>
+          </li>
+        </ul>
       </section>
 
       <!-- restaurants -->
@@ -235,7 +254,9 @@
 
     <!-- footer -->
     <footer>
-      <h1>ohmyfood</h1>
+      <h2>
+        <a href="#">ohmyfood</a>
+      </h2>
       <ul>
         <li>
           <a href="#">

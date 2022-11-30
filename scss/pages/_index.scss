@@ -1,4 +1,4 @@
-@import "utils";
+@import "../utils/mixins", "../utils/variables";
 
 /* Home Page */
 
@@ -74,18 +74,23 @@
     }
 }
 
+.instruction-cards{
+    @include cards-container;
+    margin: 0;
+    width: 100%;
+}
+
 .instruction-card {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
     padding: 1.75rem 0;
     border-radius: 20px;
     background: $bg1;
     width: 100%;
 
     @include box-shadow;
-    cursor: pointer;
+    
     transition: background-color 0.25s ease-in-out;
 
     &:hover {
@@ -186,4 +191,49 @@
         }
     }
     @include btn-hover;
+}
+
+
+/* responsive */
+
+@media (min-width: 768px) {
+
+    .instructions {
+        height: auto;
+        gap: 1.25rem;
+
+        h2 {
+            text-align: center;
+        }
+
+        .instruction-card {
+            width: 45%;
+        }
+    }
+
+    #restaurants {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .restaurant {
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    /* index page */
+    .instructions {
+        .instruction-card {
+            width: max(30%, 350px);
+        }
+    }
+
+    .restaurant {
+        width: 22.5%;
+    }
+
 }
