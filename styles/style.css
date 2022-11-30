@@ -720,12 +720,14 @@ header .back-btn {
   position: fixed;
   height: 100vh;
   width: 100vw;
+  top: 0;
+  left: 0;
   z-index: 100;
   background: #fff;
   color: #9356dc;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 1077ms steps(1, end) forwards;
-          animation: loader-vanished 1077ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 2337ms steps(1, end) forwards;
+          animation: loader-vanished 2337ms steps(1, end) forwards;
 }
 
 @-webkit-keyframes loader-vanished {
@@ -952,7 +954,6 @@ html {
 }
 
 body {
-  position: relative;
   max-width: 1600px;
   margin: auto;
   background: #f7f7f7;

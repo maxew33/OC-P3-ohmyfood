@@ -14,6 +14,8 @@ $loader-anim-delay: 0.2s;
     position: fixed;
     height: 100vh;
     width: 100vw;
+    top: 0;
+    left: 0;
     z-index: 100;
     background: $bg2;
     color: $primary;
