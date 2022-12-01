@@ -189,7 +189,7 @@ footer {
   background: #353535;
   color: #fff;
   line-height: 2rem;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
 }
 footer h2 {
   font-size: 1.25rem;
@@ -304,6 +304,8 @@ header .back-btn {
   flex-wrap: wrap;
   gap: 1.25rem 0;
   margin: 40px 0;
+  margin: 0;
+  padding-bottom: 40px;
   background: #fff;
 }
 .instructions h2 {
@@ -318,7 +320,7 @@ header .back-btn {
   flex-wrap: wrap;
   gap: 1.25rem 0;
   margin: 40px 0;
-  margin: 0;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -726,8 +728,8 @@ header .back-btn {
   background: #fff;
   color: #9356dc;
   font-family: shrikhand;
-  -webkit-animation: loader-vanished 2337ms steps(1, end) forwards;
-          animation: loader-vanished 2337ms steps(1, end) forwards;
+  -webkit-animation: loader-vanished 1644ms steps(1, end) forwards;
+          animation: loader-vanished 1644ms steps(1, end) forwards;
 }
 
 @-webkit-keyframes loader-vanished {

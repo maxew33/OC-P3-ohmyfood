@@ -66,6 +66,8 @@
 
 .instructions {   
     @include cards-container;
+    margin: 0;
+    padding-bottom: 40px;
     background: $bg2;
 
     h2 {
@@ -76,7 +78,7 @@
 
 .instruction-cards{
     @include cards-container;
-    margin: 0;
+    margin-top: 0;
     width: 100%;
 }
 
