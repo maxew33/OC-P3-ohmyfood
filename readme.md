@@ -33,7 +33,7 @@
   * Section contenant les 4 menus sous forme de carte (au clic sur la carte => redirection vers la page du menu)
 
 - Pages du menu
-  * 4 pages contenant chacune le menu d'un resraurant
+  * 4 pages contenant chacune le menu d'un restaurant
 
 - Footer
   * le même sur toutes les pages
@@ -53,6 +53,6 @@
   * loader spinner, apparait pendant 1 à 3 secondes et couvre l'intégralité de l'écran
 
 - Pages de menu
-  * apparition progressive des palts avec un éger décalage dans le temps
+  * apparition progressive des palts avec un léger décalage dans le temps
   * au clic, apparition d'une coche qui coulisse de droite à gauche. Si nom du plat trop long => rognage avec points de suspensions
 
