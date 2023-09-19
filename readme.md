@@ -1,3 +1,39 @@
+# Oh My Food ! (OC - P3)
+
+![OhMyFood banner](https://zupimages.net/up/23/36/gotu.png)
+
+Ce repository contient le code du projet 3 de la formation développeur d'application javascript React d'OpenClassrooms : Oh My Food !
+
+## Compétences cibles
+
+- Mettre en oeuvre des effets CSS graphiques avancés
+- Assurer la cohérence graphique d'un site web
+- Mettre en place une structure de navigation pour un site web
+- Mettre en place son environnement Front-End
+- Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
+
+## Objectif
+
+- Implémenter la version mobile d'un site de foodtech avec des animations CSS
+- Dynamiser une page web avec des animations css
+
+## Installation
+
+- Dans le terminal, taper la commande : `npm install`
+- En developpement, l'application utilise des données mockées, et les données du backend en production 
+
+## Ressources
+
+-   [Maquettes](https://www.figma.com/proto/QxcgHffxtCX2uSWfHPzUZV/OC-P14---HRNet?node-id=7-41&starting-point-node-id=7%3A41)
+
+## Author
+
+-   [Maxime Malfilâtre](https://www.github.com/maxew33)
+
+
+
+
+
 # ohmyfood
 
 ## identité graphique
